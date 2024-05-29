@@ -1,6 +1,7 @@
 var data = {
     age: 33,
-    name: "Niranjan"
+    name: "Niranjan",
+    mail: "niranjan.niran4@gmail.com"
 }
 
 console.log(data)
