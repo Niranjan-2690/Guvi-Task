@@ -25,3 +25,23 @@
         return result
     })
     console.log(oddNumbers(arrIIFE))
+
+//b. Convert all the strings to title caps in a string array
+
+    let titles = ["Captain America", "Iron Man", "Spider Man", "Black Panther"]
+    let initialCapLetter = function(titles){
+        return titles.map((initialLetter) => {
+            return initialLetter.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())
+        })
+    }
+    console.log(initialCapLetter(titles))
+
+    let titlesIIFE = ["Captain America", "Iron Man", "Spider Man", "Black Panther"]
+    let initialCapLetterIIFE = (function(titlesIIFE){
+        return titlesIIFE.map((initialLetter) => {
+            return initialLetter.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())
+        })
+    })
+    console.log(initialCapLetterIIFE(titlesIIFE))
+
+
