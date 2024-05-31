@@ -13,7 +13,7 @@
         return result
     }
     console.log(oddNumbers(arrAno))
-
+//------------------------------------------------------------------------------
     var arrIIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     (function (oddNumber){
         let result = []
@@ -37,7 +37,7 @@
         })
     }
     console.log(initialCapLetter(titles))
-
+//----------------------------------------------------------------------------------
     let titlesIIFE = ["Captain America", "Iron Man", "Spider Man", "Black Panther"]
     let initialCapLetterIIFE = (function(titlesIIFE){
         return titlesIIFE.map((initialLetter) => {
@@ -61,7 +61,7 @@
     }
     console.log(sumNumbers(sum))
 
-
+//------------------------------------------------------------------------------
     let sumIIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     let sumNumbersIIFE = (function(number){
@@ -94,7 +94,7 @@
     let primeNumbers = isPrime.filter(prime);
     console.log("Prime numbers:", primeNumbers);
 
-
+//------------------------------------------------------------------------------
 
     let isPrimeIIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     let primeIIFE = (function(priNumbersIIFE){
@@ -117,14 +117,152 @@
 
 // e. Return all the palindromes in an array
 
-let isPalindrome = function(item) {
-    // Convert the item to a string
-    let str = item.toString();
-    // Check if the string is equal to its reverse
-    return str === str.split('').reverse().join('');
+let palinDrome = [123, "racecar", 121, "level", "Water", "hello", "madam"]
+
+let palinDromes = function(input){
+    let inp = input.toString();
+    return inp === inp.split('').reverse().join('')
+}
+let output = palinDrome.filter(palinDromes)
+
+console.log("Palindrome:", output)
+
+//------------------------------------------------------------------------------
+let palinDromeIIFE = [123, "racecar", 121, "level", "Water", "hello", "madam"]
+
+let palinDromesIIFE = function(input){
+    let inp = input.toString();
+    return inp === inp.split('').reverse().join('')
+}
+let outputIIFE = palinDromeIIFE.filter(palinDromesIIFE)
+
+console.log("Palindrome:", outputIIFE)
+
+//--------------------------------------------------------------------------------------------
+
+// f. Return median of two sorted arrays of the same size
+
+let arr1 = [1, 3, 5];
+let arr2 = [2, 4, 6];
+
+let median = function findMedianSortedArrays(arr1, arr2) {
+    let merged = [];
+    let i = 0, j = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            merged.push(arr1[i]);
+            i++;
+        } else {
+            merged.push(arr2[j]);
+            j++;
+        }
+    }
+
+    while (i < arr1.length) {
+        merged.push(arr1[i]);
+        i++;
+    }
+
+    while (j < arr2.length) {
+        merged.push(arr2[j]);
+        j++;
+    }
+
+    let mid = Math.floor(merged.length / 2);
+
+    if (merged.length % 2 === 0) {
+        return (merged[mid - 1] + merged[mid]) / 2;
+    } else {
+        return merged[mid];
+    }
 }
 
-let items = [121, "racecar", 12321, "hello", "madam", "world", 12345, "level"];
+console.log("Median:", median(arr1, arr2)); 
 
-let palindromes = items.filter(isPalindrome);
-console.log("Palindromes:", palindromes);
+//------------------------------------------------------------------------------
+let arrs1 = [1, 3, 5];
+let arrs2 = [2, 4, 6];
+
+let medians = (function findMedianSortedArrays(arrs1, arrs2) {
+    let merged = [];
+    let i = 0, j = 0;
+
+    while (i < arrs1.length && j < arrs2.length) {
+        if (arr1[i] < arr2[j]) {
+            merged.push(arrs1[i]);
+            i++;
+        } else {
+            merged.push(arrs2[j]);
+            j++;
+        }
+    }
+
+    while (i < arrs1.length) {
+        merged.push(arrs1[i]);
+        i++;
+    }
+
+    while (j < arrs2.length) {
+        merged.push(arrs2[j]);
+        j++;
+    }
+
+    let mid = Math.floor(merged.length / 2);
+
+    if (merged.length % 2 === 0) {
+        return (merged[mid - 1] + merged[mid]) / 2;
+    } else {
+        return merged[mid];
+    }
+})
+
+console.log("Median:", medians(arrs1, arrs2)); 
+
+//--------------------------------------------------------------------------
+
+// g. Remove duplicates from an array
+
+let values = [1, 2, 2, 3, 3, 4, 4, 5];
+
+let duplicates = function(arr) {
+    return [...new Set(arr)];
+}
+let result = duplicates(values);
+console.log(result);
+
+//------------------------------------------------------------------------------
+let valuesIIFE = [1, 2, 2, 3, 3, 4, 4, 5];
+
+let duplicatesIIFE = function(arr) {
+    return [...new Set(arr)];
+}
+let resultIIFE = duplicatesIIFE(values);
+console.log(resultIIFE);
+
+//----------------------------------------------------------------------------
+
+// h. Rotate an array by k times
+
+let array = [1, 2, 3, 4, 5, 6, 7];
+let ktimes = 3;
+
+let rotate = function rotateArray(arr, k) {
+    ktimes = ktimes % arr.length;
+    return arr.slice(-ktimes).concat(arr.slice(0, -ktimes));
+}
+
+let rotatedArray = rotate(array, ktimes);
+console.log(rotatedArray); 
+
+//------------------------------------------------------------------------------
+let arrayIIFE = [1, 2, 3, 4, 5, 6, 7];
+let ktimesIIFE = 3;
+
+let rotateIIFE = (function rotateArray(arr, k) {
+    ktimesIIFE = ktimesIIFE % arr.length;
+    return arr.slice(-ktimesIIFE).concat(arr.slice(0, -ktimesIIFE));
+})
+
+let rotatedArrayIIFE = rotate(array, ktimesIIFE);
+console.log(rotatedArray); 
