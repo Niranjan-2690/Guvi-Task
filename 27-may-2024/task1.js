@@ -83,8 +83,48 @@
             return false
         }if(priNumbers === 2){
             return true
-        }if(priNumbers % 2 !==0){
+        }if(priNumbers % 2 ===0){
             return false
-        }
+        }for(let i = 3; i<Math.sqrt(priNumbers); i +=2){
+            if(priNumbers % i === 0){
+                return false
+            } 
+        }return true
     }
-    console.log(prime(isPrime))
+    let primeNumbers = isPrime.filter(prime);
+    console.log("Prime numbers:", primeNumbers);
+
+
+
+    let isPrimeIIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    let primeIIFE = (function(priNumbersIIFE){
+        if(priNumbersIIFE <= 1){
+            return false
+        }if(priNumbersIIFE === 2){
+            return true
+        }if(priNumbersIIFE % 2 ===0){
+            return false
+        }for(let i = 3; i<Math.sqrt(priNumbersIIFE); i +=2){
+            if(priNumbersIIFE % i === 0){
+                return false
+            } 
+        }return true
+    })
+    let priNumbersIIFE = isPrime.filter(primeIIFE);
+    console.log("Prime numbers:", priNumbersIIFE);
+
+//------------------------------------------------------------------------------------------
+
+// e. Return all the palindromes in an array
+
+let isPalindrome = function(item) {
+    // Convert the item to a string
+    let str = item.toString();
+    // Check if the string is equal to its reverse
+    return str === str.split('').reverse().join('');
+}
+
+let items = [121, "racecar", 12321, "hello", "madam", "world", 12345, "level"];
+
+let palindromes = items.filter(isPalindrome);
+console.log("Palindromes:", palindromes);
