@@ -41,10 +41,23 @@ var data = {
     "Certification": "FullStack Developer"
 }
 
-for(let i = 0; i < Object.keys(data).length; i++){
-    console.log(Object.keys(data)[i])
+//--------For Loop--------------
+for (let i = 0; i < data.Skills.length; i++){
+    console.log(data.Skills[i])
+}
+//--------For in----------------
+
+for(let key in data.Skills){
+    console.log(data.Skills[key])
+}
+
+//--------For of----------------
+
+for (let key of data.Skills){
+    console.log(key)
 }
 //--------ForEach-----------------
-Object.keys(data.Experiance).forEach(key => {
-    console.log(data.Experiance[key]);
+
+Object.keys(data.Skills).forEach(key => {
+    console.log(data.Skills[key]);
 });
