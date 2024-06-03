@@ -33,7 +33,6 @@ class Circle {
     }
 }
 
-// Creating instances of Circle class
 const circle1 = new Circle();
 console.log(`Circle 1: ${circle1.getCircle()}`);
 
