@@ -1,0 +1,33 @@
+html {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(80, 78, 107, 1) 0%,
+    rgba(142, 142, 228, 1) 35%,
+    rgba(130, 217, 235, 1) 100%
+  );
+}
+
+.events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.img-side{
+   height: 100%
+}
