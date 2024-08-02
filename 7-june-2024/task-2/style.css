@@ -31,3 +31,11 @@ body {
 .img-side{
    height: 100%
 }
+
+.container-height{
+  height: 400px
+}
+
+.button{
+  text-align: center;
+}
