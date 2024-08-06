@@ -19,6 +19,8 @@ body{
     background-color: rgb(212, 212, 212);
     padding: 20px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .input{
@@ -31,11 +33,31 @@ body{
     border-radius: 40px;
     border: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
+    color:rgb(150, 147, 147)
 }
 
 .input-element{
-    width: 40px;
-    height: 40px;
-    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    margin-top: 20px;
+    gap: 20px;
 }
+
+.input-element > button {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: antiquewhite;
+        border: none;
+        cursor: pointer;
+        box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+.input-element .equals{
+        width: 115px;
+        background-color: rgb(245, 100, 100);
+        border-radius: 10px;
+        }
