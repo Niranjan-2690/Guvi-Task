@@ -21,45 +21,60 @@
                     <input type="text" class="form-control" id="lastname">
                 </div>
                 <div class="col-md-4">
-                    <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
                 </div>
                 <div class="col-4">
-                    <label for="inputAddress2" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Door no, street, area">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Door no, street, area">
                 </div>
                 <div class="col-md-3">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city">
                 </div>
                 <div class="col-md-3">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Tamil Nadu</option>
-                        <option>Karnataka</option>
-                        <option>Kerala</option>
+                    <label for="state" class="form-label">State</label>
+                    <select id="state" class="form-select">
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="postcode" class="form-label">Post Code</label>
+                    <input type="text" class="form-control" id="postcode">
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Gender</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
+                    <label for="address" class="form-label">Gender</label>
+                    <select class="form-select" aria-label="Default select example" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select" size="3" aria-label="size 3 select example">
-                        <option selected>Select your food</option>
-                        <option value="Dosa">Dosa</option>
-                        <option value="Idly">Idly</option>
-                        <option value="Pongal">Pongal</option>
-                        <option value="Poori">Poori</option>
-                    </select>
+                    <label>Foods</label>
+                    <div class="food">
+                        <div class="food-option">
+                            <input type="checkbox" name="foods" value="Idly" id="idly">
+                            <label for="idly">Idly</label>
+                        </div>
+                        <div class="food-option">
+                            <input type="checkbox" name="foods" value="Doosa" id="doosa">
+                            <label for="doosa">Doosa</label>
+                        </div>
+                        <div class="food-option">
+                            <input type="checkbox" name="foods" value="Poori" id="poori">
+                            <label for="poori">Poori</label>
+                        </div>
+                        <div class="food-option">
+                            <input type="checkbox" name="foods" value="Pongal" id="pongal">
+                            <label for="pongal">Pongal</label>
+                        </div>
+                        <div class="food-option">
+                            <input type="checkbox" name="foods" value="Idiyappam" id="idiyappam">
+                            <label for="idiyappam">Idiyappam</label>
+                        </div>
+                    </div>
                 </div>                
                 <div class="d-flex justify-content-center mt-5">
                     <button type="submit" class="btn btn-primary btn-width">Add item</button>
@@ -75,9 +90,9 @@
                             <th scope="col">Last Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Address</th>
-                            <th scope="col">Pincode</th>
+                            <th scope="col">City</th>
                             <th scope="col">State</th>
-                            <th scope="col">Country</th>
+                            <th scope="col">Pincode</th>
                             <th scope="col">Gender</th>
                             <th scope="col">Food</th>
                         </tr>
@@ -89,8 +104,7 @@
                 </table>
             </div>
         </div>        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
         <script src="script.js"></script>
 </body>

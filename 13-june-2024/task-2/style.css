@@ -8,3 +8,28 @@
     height: 50px;
     font-size: 18px;
 }
+
+.food {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.food-option {
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+    margin-bottom: 5px; /* Adds space between each option */
+}
+
+.food-option input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+.food-option label {
+    margin: 0; /* Removes default margin from the label */
+}
