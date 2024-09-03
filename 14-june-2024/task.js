@@ -1,16 +1,14 @@
+let value = document.getElementById("countDown");
+let countdown = 10;
 
-    let value = document.getElementById("countDown");
-    let countdown = 10;
+(function updateCountdown() {
+    value.innerText = countdown--;
 
-    let counter = setInterval(() => {
-        value.innerText = countdown--;
-
-        if (countdown < 0) {
-            clearInterval(counter);
-            value.innerText = "Happy Independance Day";
-        }
-    }, 1000);
-
-
-
-
+    if (countdown >= 0) {
+        setTimeout(function() {
+            updateCountdown();
+        }, 1000);
+    } else {
+        value.innerText = "Happy Independence Day";
+    }
+})();
