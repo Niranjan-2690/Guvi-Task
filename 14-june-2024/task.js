@@ -1,14 +1,27 @@
-let value = document.getElementById("countDown");
-let countdown = 10;
+const callBack = document.getElementById("countDown")
 
-(function updateCountdown() {
-    value.innerText = countdown--;
+countDown = (num = 10, callback =()=>{})=>{
+    callBack.innerText = num
+    setTimeout(()=>{callback()}, 1000)
+}
 
-    if (countdown >= 0) {
-        setTimeout(function() {
-            updateCountdown();
-        }, 1000);
-    } else {
-        value.innerText = "Happy Independence Day";
-    }
-})();
+countDown(10, 
+    ()=>countDown(9, 
+        ()=>countDown(8, 
+            ()=>countDown(7, 
+                ()=>countDown(6, 
+                    ()=>countDown(5, 
+                        ()=>countDown(4, 
+                            ()=>countDown(3, 
+                                ()=>countDown(2, 
+                                    ()=>countDown(1, 
+                                        ()=>countDown("Happy Independance Day"))
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    )
