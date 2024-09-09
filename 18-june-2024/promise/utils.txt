@@ -1,0 +1,38 @@
+<!-- Place the script here -->
+<!-- <script>
+const url = "https://restcountries.com/v3.1/all";
+
+function fetchCountries() {
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            const countriesContainer = document.getElementById("countries");
+
+            data.forEach((country) => {
+                // Create a new card element
+                const countryCard = document.createElement("div");
+                countryCard.className = "card col-md-4"; // Bootstrap column class for responsive layout
+                countryCard.style.width = "18rem";
+                countryCard.style.marginBottom = "20px";
+
+                // Set up the inner content of the card
+                countryCard.innerHTML = `
+                    <img src="${country.flags.svg}" class="card-img-top" alt="Flag of ${country.name.common}">
+                    <div class="card-body">
+                        <h5 class="card-title">${country.name.common}</h5>
+                        <p class="card-text">Capital: ${country.capital ? country.capital[0] : 'N/A'}</p>
+                        <p class="card-text">Population: ${country.population.toLocaleString()}</p>
+                        <a href="${country.maps.googleMaps}" target="_blank" class="btn btn-primary">View on Map</a>
+                    </div>
+                `;
+
+                // Append the card to the container
+                countriesContainer.appendChild(countryCard);
+            });
+        })
+        .catch((error) => console.log("Error:", error));
+}
+
+// Call the function to fetch and display the countries
+fetchCountries();
+</script> -->
