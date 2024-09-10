@@ -6,14 +6,14 @@ function fetchCountries() {
     fetch(url)
         .then((response) => response.json())
         .then((result) => {
-            console.log(result);
             const countriesContainer = document.getElementById("countries");
             result.forEach((country) => {
                 // Create a new card element
                 const countryCard = document.createElement("div");
-                countryCard.className = "card col-lg-4 col-md-4 col-sm-12";
-                countryCard.style.width = "18rem";
+                countryCard.className = "card col-lg-4 col-md-4 col-sm-12 me-1";
+                countryCard.style.width = "50px";
                 countryCard.style.marginBottom = "20px";
+                countryCard.style.marginTop = "20px";
 
                 // Set up the inner content of the card
                 countryCard.innerHTML = `
@@ -50,7 +50,6 @@ function fetchWeather(lat, lon, weatherContainer) {
     fetch(weatherUrl)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data); // Check the structure of the API response
             if (data.main && data.weather) {
                 const weatherDetails = `
                     <p>Temperature: ${data.main.temp} °C</p>
